@@ -1,15 +1,12 @@
+import * as day2input from './day2input.js'
 
-import * as reports from './reports.js'
-
-
-
-// const resportslist = reports.lists
-const resportslist = `7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9`.split('\n')
+const resportslist = day2input.lists
+// const resportslist = `7 6 4 2 1
+// 1 2 7 8 9
+// 9 7 6 2 1
+// 1 3 2 4 5
+// 8 6 4 4 1
+// 1 3 6 7 9`.split('\n')
 // console.log(resportslist)
 
 const splittedItems = resportslist
@@ -60,7 +57,4 @@ const totalSafeSum = isSafeByOrderAndDiff.reduce((acc, item) => {
 }, 0)
 
 console.log(totalSafeSum)
-
-
-
-
+console.assert(totalSafeSum === 287 )

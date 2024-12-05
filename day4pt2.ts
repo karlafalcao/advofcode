@@ -44,8 +44,8 @@ xmasMatrix
 					// console.log(diag, diags[diag])
 					let wordChars = []
 
-					let xC = rowIdx
-					let yC = colIdx
+					let xC
+					let yC
 
 					const directions = diags[diag]
 

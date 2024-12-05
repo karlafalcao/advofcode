@@ -1,8 +1,6 @@
+import * as day1input from './day1input.js'
 
-import * as locations from './locations.js'
-
-// console.log(locations)
-const lists = locations.lists
+const lists = day1input.lists
 // `40094   37480
 // 52117   14510`
 
@@ -29,5 +27,7 @@ console.log(diffsList)
 
 // 
 const totalDiffsSum = diffsList.reduce((acc, item) => acc+parseInt(item), 0)
+
 console.log(totalDiffsSum)
+console.assert(totalDiffsSum === '2430334')
 
