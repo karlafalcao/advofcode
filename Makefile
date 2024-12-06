@@ -27,3 +27,6 @@ run-day4pt2:
 
 run-day5pt1:
 	deno --allow-read day5pt1.ts
+
+run-day5pt2:
+	deno --allow-read day5pt2.ts
