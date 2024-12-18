@@ -30,3 +30,9 @@ run-day5pt1:
 
 run-day5pt2:
 	deno --allow-read day5pt2.ts
+
+run-day6pt1:
+	deno --allow-read day6pt1.ts
+
+run-day6pt2:
+	deno --allow-read --allow-write day6pt2.ts
