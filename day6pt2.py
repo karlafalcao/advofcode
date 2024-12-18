@@ -164,36 +164,20 @@ if __name__ == "__main__":
     result = solve_guard_patrol(day6input)
     print("Number of distinct positions visited:", result)
 
-    
-    # import subprocess
-    # # subprocess.call("deno",  "--allow-read --allow-write day6pt2.ts")
-    # command = ['deno --allow-read --allow-write day6pt2.ts']
-    # process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    # stdout, stderr = process.communicate()
-
-    # stdout = [item for item in stdout.decode('ascii').split("\n") if item != '']
-
-
-    # if(len(stdout) == 0):
-    #     stdout = ""
-    # else:
-    #     stdout = stdout[-1]
-
-    # jsonOutput = {
-    #     "stdout": stdout,
-    #     "stderr": stderr.decode('ascii'),
-    #     "output": stdout
-    # }
-    # print(jsonOutput)
-    # 
     import os
     os.system('deno --allow-read --allow-write day6pt2.ts')
-    # 
+    #
     # TODO: run day6pt2.ts to generate day6input_mazes variable
     from day6input_mazes import day6input_mazes
 
     looped_mazes = count_looped(day6input_mazes, expected=[(False, 3312), (True, 1957)])
     print("Number of loopedmazes:", looped_mazes)
     # delete file day6input_mazes.py
-    os.remove('day6input_mazes.py')
+    delete_file = ''
+    while delete_file != 'y' and delete_file != 'n':
+        delete_file = input("Should delete day6input_mazes.py file(y/n)?")
+        print(delete_file)
+
+        if delete_file == 'y':
+            os.remove('day6input_mazes.py')
     
