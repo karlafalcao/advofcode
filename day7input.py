@@ -1,7 +1,4 @@
-file = open('day7input.txt', 'r')
-file_content = file.read()
-# print(file_content)
-file.close()
+
 
 example_input = '''190: 10 19
 3267: 81 40 27
@@ -13,7 +10,11 @@ example_input = '''190: 10 19
 21037: 9 7 18 13
 292: 11 6 16 20'''.split('\n')
 
-# example_input = file_content.split('\n')
+file = open('day7input.txt', 'r')
+file_content = file.read()
+file.close()
+
+example_input = file_content.split('\n')
 
 example_input = list(map(lambda _ : _.split(': '), example_input))
-print(example_input)
+

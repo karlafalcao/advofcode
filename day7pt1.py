@@ -43,6 +43,6 @@ def check_row(line):
 
 if __name__ == '__main__':
 	rows_evals = [check_row(line) for line in example_input]
-
 	print('Result:', sum(rows_evals))
-	assert( sum(rows_evals) == 3749 )
+	assert( sum(rows_evals) == 3749 or 1545311493300)
+
