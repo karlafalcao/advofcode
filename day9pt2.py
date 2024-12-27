@@ -154,14 +154,20 @@ def solve_whole_file_compaction(disk_map_str):
      2) Compact by moving whole files in descending ID order
      3) Compute and return the checksum
     """
+    import json
     # 1) Parse
     blocks = parse_map_to_blocks(disk_map_str)
-    print(blocks)
+    # print(blocks)
+    with open('outputday9rawblocks.txt', 'w') as file:
+        json.dump(blocks, file, indent=0)
 
+  
     # 2) Perform whole-file compaction
     blocks = compact_whole_files(blocks)
-    print(blocks)
+    with open('outputday9pt2gpt.txt', 'w') as file:
+        json.dump(blocks, file, indent=0)
 
+  
     # 3) Compute checksum
     return compute_checksum(blocks)
 
